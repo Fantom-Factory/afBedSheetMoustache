@@ -11,7 +11,7 @@ internal const class SrcLocation {
 		this.errMsg		= errMsg
 		this.src 		= src.splitLines
 	}
-
+	
 	Int:Str srcCode(Int extra) {
 		min := (errLine - 1 - extra).max(0)	// -1 so "Line 1" == src[0]
 		max := (errLine - 1 + extra + 1).min(src.size)
@@ -23,7 +23,7 @@ internal const class SrcLocation {
 		
 		return lines
 	}
-	
+
 	private Bool canTrim(Int:Str lines) {
 		lines.vals.all { it[0].isSpace }
 	}

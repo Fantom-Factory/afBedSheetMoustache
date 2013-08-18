@@ -14,13 +14,16 @@ class Build : BuildPod {
 					"license.name"	: "BSD 2-Clause License",
 					"repo.private"	: "true",
 			
-					"afIoc.module"	: "afBedSheet::BedSheetModule"		
+					"afIoc.module"	: "afBedSheetMoustache::MoustacheModule"		
 				]
+
+		index	= [	"afIoc.module"	: "afBedSheetMoustache::MoustacheModule"
+		]
 
 		depends = ["sys 1.0", "web 1.0",
 					"afIoc 1.4+", "afBedSheet 1.0+", "mustache 1.0"]
 		srcDirs = [`test/`, `test/unit-tests/`, `test/app-tests/`, `test/app/`, `fan/`, `fan/public/`, `fan/internal/`, `fan/internal/utils/`]
-		resDirs = [`doc/`]
+		resDirs = [`doc/`, `res/`]
 
 		docApi = true
 		docSrc = true

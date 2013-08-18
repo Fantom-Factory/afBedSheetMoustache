@@ -1,6 +1,5 @@
 using afIoc::Inject
-using afIoc::Registry
-using afBedSheet
+using afBedSheet::Text
 
 internal const class T_PageHandler {
 
