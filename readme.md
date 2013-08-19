@@ -1,6 +1,6 @@
 # afBedSheetMoustache
 
-`afBedSheetMoustache` is a Fantom library that integrates [Mustache](https://bitbucket.org/xored/mustache/) templates with the
+`afBedSheetMoustache` is a [Fantom](http://fantom.org) library that integrates [Mustache](https://bitbucket.org/xored/mustache/) templates with the
 [afBedSheet](http://repo.status302.com/doc/afBedSheet/#overview) web framework.
 
 It provides a cache for your compiled [Mustache](https://bitbucket.org/xored/mustache/) templates and throws `MoustacheErr`s to show details of any compilation failures.
@@ -32,7 +32,8 @@ Example:
 
     const class RouteHandler {
 
-      @Inject private const MoustacheTemplates templates
+      @Inject 
+      private const MoustacheTemplates templates
 
       new make(|This|in) { in(this) }
 
