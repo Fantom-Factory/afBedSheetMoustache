@@ -11,16 +11,16 @@ internal const class MoustacheErrPrinter {
 	
 	Void printHtml(WebOutStream out, Err? err) {
 		if (err != null && err is MoustacheErr) {
-			srcLoc := ((MoustacheErr) err).srcLoc
+			srcErrLoc := ((MoustacheErr) err).srcErrLoc
 			out.h2.w("Moustache Compilation Err").h2End
 			
-			out.p.w(srcLoc.location).w(" : Line ${srcLoc.errLine}").br
-			out.w("&nbsp&nbsp;-&nbsp;").writeXml(srcLoc.errMsg).pEnd
+			out.p.w(srcErrLoc.srcLocation).w(" : Line ${srcErrLoc.errLineNo}").br
+			out.w("&nbsp&nbsp;-&nbsp;").writeXml(srcErrLoc.errMsg).pEnd
 			
 			out.div("class=\"srcLoc\"")
 			out.table
-			srcLoc.srcCode(linesOfSrcCode).each |src, line| {
-				if (line == srcLoc.errLine) { out.tr("class=\"errLine\"") } else { out.tr }
+			srcErrLoc.srcCodeSnippetMap(linesOfSrcCode).each |src, line| {
+				if (line == srcErrLoc.errLineNo) { out.tr("class=\"errLine\"") } else { out.tr }
 				out.td.w(line).tdEnd.td.w(src.toXml).tdEnd
 				out.trEnd
 			}
@@ -31,16 +31,9 @@ internal const class MoustacheErrPrinter {
 
 	Void printStr(StrBuf buf, Err? err) {
 		if (err != null && err is MoustacheErr) {
-			srcLoc := ((MoustacheErr) err).srcLoc
+			srcErrLoc := ((MoustacheErr) err).srcErrLoc
 			buf.add("\nMoustache Compilation Err:\n")
-			
-			buf.add("  ${srcLoc.location}").add(" : Line ${srcLoc.errLine}\n")
-			buf.add("    - ${srcLoc.errMsg}\n\n")
-			
-			srcLoc.srcCode(linesOfSrcCode).each |src, line| {
-				if (line == srcLoc.errLine) { buf.add("==>") } else { buf.add("   ") }
-				buf.add("${line.toStr.justr(3)}: ${src}\n".replace("\t", "    "))
-			}
+			buf.add(srcErrLoc.srcCodeSnippet(linesOfSrcCode))
 		}
 	}	
 }

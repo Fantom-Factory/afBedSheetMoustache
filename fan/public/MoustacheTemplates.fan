@@ -1,5 +1,6 @@
 using afIoc::ConcurrentState
 using afIoc::Inject
+using afIoc::SrcErrLocation
 using afBedSheet::Config
 using mustache::Mustache
 using mustache::MustacheParser
@@ -53,10 +54,10 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 			if (!reg.find)
 				throw err
 			
-			line 	:= reg.group(1).toInt
-			msg 	:= reg.group(2).splitLines.join.replace("\t", " ")	// take out the new line chars
-			srcLoc	:= SrcLocation(loc, line, msg, src)
-			throw MoustacheErr(srcLoc, msg, linesOfSrcCode)
+			line 		:= reg.group(1).toInt
+			msg 		:= reg.group(2).splitLines.join.replace("\t", " ")	// take out the new line chars
+			srcErrLoc	:= SrcErrLocation(loc, src, line, msg)
+			throw MoustacheErr(srcErrLoc, linesOfSrcCode)
 		}
 	}
 }

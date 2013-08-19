@@ -4,7 +4,7 @@ Overview [#overview]
 [afBedSheet]`http://repo.status302.com/doc/afBedSheet/#overview` web framework.
 
 It provides a cache for your compiled [Mustache]`https://bitbucket.org/xored/mustache/` templates and throws `MoustacheErr`s to
-show details on any compilation failures.
+show details of any compilation failures.
 
 Example:
 pre>
@@ -47,6 +47,21 @@ const class RouteHandler {
   }
 }
 <pre
+
+
+
+Usage
+*****
+To use 'afBedSheetMoustache' just add it as dependency in your project's 'build.fan'. Example:
+
+pre>
+depends = ["sys 1.0", "afIoc 1.4+", "afBedSheet 1.0+", "afBedSheetMoustache 1.0+", ... ]
+<pre
+
+...and that's it!
+
+Because 'afBedSheetMoustache' defines [pod meta-data]`http://repo.status302.com/doc/afIoc/RegistryBuilder.html` for
+[afIoc]`http://repo.status302.com/doc/afIoc/#overview`, no more configuration or setup is required.
 
 
 
