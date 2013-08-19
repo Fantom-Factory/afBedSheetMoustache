@@ -4,8 +4,8 @@ using web::WebOutStream
 
 internal const class MoustacheErrPrinter {
 	
-	@Inject	@Config { id="afBedSheet.moustache.linesOfSrcCode" } 	
-	private const Int linesOfSrcCode
+	@Inject	@Config { id="afBedSheet.moustache.linesOfSrcCodePadding" } 	
+	private const Int linesOfSrcCodePadding
 	
 	new make(|This|in) { in(this) }
 	
@@ -19,7 +19,7 @@ internal const class MoustacheErrPrinter {
 			
 			out.div("class=\"srcLoc\"")
 			out.table
-			srcErrLoc.srcCodeSnippetMap(linesOfSrcCode).each |src, line| {
+			srcErrLoc.srcCodeSnippetMap(linesOfSrcCodePadding).each |src, line| {
 				if (line == srcErrLoc.errLineNo) { out.tr("class=\"errLine\"") } else { out.tr }
 				out.td.w(line).tdEnd.td.w(src.toXml).tdEnd
 				out.trEnd
@@ -33,7 +33,7 @@ internal const class MoustacheErrPrinter {
 		if (err != null && err is MoustacheErr) {
 			srcErrLoc := ((MoustacheErr) err).srcErrLoc
 			buf.add("\nMoustache Compilation Err:\n")
-			buf.add(srcErrLoc.srcCodeSnippet(linesOfSrcCode))
+			buf.add(srcErrLoc.srcCodeSnippet(linesOfSrcCodePadding))
 		}
 	}	
 }

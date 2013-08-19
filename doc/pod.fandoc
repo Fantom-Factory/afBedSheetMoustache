@@ -50,8 +50,8 @@ const class RouteHandler {
 
 
 
-Usage
-*****
+Usage [#usage]
+**************
 To use 'afBedSheetMoustache' just add it as dependency in your project's 'build.fan'. Example:
 
 pre>
