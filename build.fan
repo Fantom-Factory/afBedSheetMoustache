@@ -4,15 +4,15 @@ class Build : BuildPod {
 
 	new make() {
 		podName = "afBedSheetMoustache"
-		summary = ""
-		version = Version([0,0,1])
+		summary = "A library for integrating 'Mustache' templates with the afBedSheet web framework."
+		version = Version([0,0,2])
 
 		meta	= [	"org.name"		: "Alien-Factory",
 					"org.uri"		: "http://www.alienfactory.co.uk/",
 					"vcs.uri"		: "https://bitbucket.org/SlimerDude/afbedsheetmoustache",
 					"proj.name"		: "AF-BedSheetMoustache",
 					"license.name"	: "BSD 2-Clause License",
-					"repo.private"	: "true",
+					"repo.private"	: "false",
 			
 					"afIoc.module"	: "afBedSheetMoustache::MoustacheModule"		
 				]
@@ -21,7 +21,7 @@ class Build : BuildPod {
 		]
 
 		depends = ["sys 1.0", "web 1.0",
-					"afIoc 1.4.4+", "afBedSheet 1.0+", "mustache 1.0"]
+					"afIoc 1.4.4+", "afBedSheet 1.0.12+", "mustache 1.0"]
 		srcDirs = [`test/`, `test/unit-tests/`, `test/app-tests/`, `test/app/`, `fan/`, `fan/public/`, `fan/internal/`, `fan/internal/utils/`]
 		resDirs = [`doc/`, `res/`]
 

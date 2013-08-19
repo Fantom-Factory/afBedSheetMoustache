@@ -37,7 +37,8 @@ using afBedSheet::Text
 
 const class RouteHandler {
 
-  @Inject private const MoustacheTemplates templates
+  @Inject
+  private const MoustacheTemplates templates
 
   new make(|This|in) { in(this) }
 
