@@ -18,10 +18,10 @@ const mixin MoustacheTemplates {
 
 internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 	
-	@Inject @Config { id="afBedSheet.moustache.templateTimeout" }
+	@Inject @Config { id="afBedSheetMoustache.templateTimeout" }
 	private const Duration templateTimeout
 	
-	@Inject	@Config { id="afBedSheet.moustache.linesOfSrcCodePadding" } 	
+	@Inject	@Config { id="afBedSheetMoustache.linesOfSrcCodePadding" } 	
 	private const Int linesOfSrcCodePadding
 
 	private const FileCache 	cache	:= FileCache(templateTimeout)
