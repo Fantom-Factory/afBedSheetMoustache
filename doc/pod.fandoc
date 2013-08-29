@@ -69,6 +69,10 @@ Because 'afBedSheetMoustache' defines [pod meta-data]`http://repo.status302.com/
 Release Notes [#releaseNotes]
 *****************************
 
+v1.0.0 [#v1.0.0]
+----------------
+ - Chg: Renamed the `ConfigId`s values.
+
 v0.0.2 [#v0.0.2]
 ----------------
  - New: Preview release.
