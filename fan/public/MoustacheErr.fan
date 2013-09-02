@@ -1,5 +1,7 @@
 using afIoc::SrcErrLocation
 
+** Indicates a 'Mustache' parsing Err; the stack trace trace contains a code snippet of where the 
+** Err occurred.
 const class MoustacheErr : Err {
 
 	internal const SrcErrLocation srcErrLoc
