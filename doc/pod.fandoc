@@ -71,7 +71,7 @@ Release Notes [#releaseNotes]
 
 v1.0.0 [#v1.0.0]
 ----------------
- - Chg: Renamed the `ConfigId`s values.
+ - Chg: Renamed the `MoustacheConfigIds` values.
 
 v0.0.2 [#v0.0.2]
 ----------------
