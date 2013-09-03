@@ -21,8 +21,8 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 	@Inject @Config { id="afMoustache.templateTimeout" }
 	private const Duration templateTimeout
 	
-	@Inject	@Config { id="afMoustache.linesOfSrcCodePadding" } 	
-	private const Int linesOfSrcCodePadding
+	@Inject	@Config { id="afMoustache.srcCodePadding" } 	
+	private const Int srcCodePadding
 
 	private const FileCache 	cache	:= FileCache(templateTimeout)
 	
@@ -57,7 +57,7 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 			line 		:= reg.group(1).toInt
 			msg 		:= reg.group(2).splitLines.join.replace("\t", " ")	// take out the new line chars
 			srcErrLoc	:= SrcErrLocation(loc, src, line, msg)
-			throw MoustacheErr(srcErrLoc, linesOfSrcCodePadding)
+			throw MoustacheErr(srcErrLoc, srcCodePadding)
 		}
 	}
 }

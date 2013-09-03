@@ -5,11 +5,11 @@ using afIoc::SrcErrLocation
 const class MoustacheErr : Err {
 
 	internal const SrcErrLocation srcErrLoc
-	internal const Int noOfLinesOfPadding
+	internal const Int srcCodePadding
 
-	internal new make(SrcErrLocation srcErrLoc, Int noOfLinesOfPadding := 5) : super(srcErrLoc.errMsg) {
+	internal new make(SrcErrLocation srcErrLoc, Int srcCodePadding := 5) : super(srcErrLoc.errMsg) {
 		this.srcErrLoc = srcErrLoc
-		this.noOfLinesOfPadding = noOfLinesOfPadding
+		this.srcCodePadding = srcCodePadding
 	}
 
 	override Str toStr() {
@@ -17,7 +17,7 @@ const class MoustacheErr : Err {
 		buf.add("${typeof.qname}: ${msg}")
 		buf.add("\nMoustache Compilation Err:\n")
 
-		buf.add(srcErrLoc.srcCodeSnippet(noOfLinesOfPadding))
+		buf.add(srcErrLoc.srcCodeSnippet(srcCodePadding))
 
 		buf.add("\nStack Trace:")
 		return buf.toStr
