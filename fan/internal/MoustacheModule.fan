@@ -27,7 +27,7 @@ internal class MoustacheModule {
 
 	@Contribute { serviceType=FactoryDefaults# }
 	static Void contributeFactoryDefaults(MappedConfig config) {
-		config[MoustacheConfigIds.templateTimeout]			= 10sec
-		config[MoustacheConfigIds.linesOfSrcCodePadding]	= 5
+		config[MoustacheConfigIds.templateTimeout]	= 10sec
+		config[MoustacheConfigIds.srcCodePadding]	= 5
 	}
 }

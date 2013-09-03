@@ -14,11 +14,11 @@ const mixin MoustacheConfigIds {
 
 	** The time before the file system is checked for template updates.
 	** Defaults to '10sec'
-	static const Str templateTimeout			:= "afMoustache.templateTimeout"
+	static const Str templateTimeout	:= "afMoustache.templateTimeout"
 
 	** When printing a `MoustacheErr`, this is the number of lines of code to print before and 
 	** after the actual error. 
 	** Defaults to '5'
-	static const Str linesOfSrcCodePadding		:= "afMoustache.linesOfSrcCodePadding"
+	static const Str srcCodePadding		:= "afMoustache.srcCodePadding"
 
 }
