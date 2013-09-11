@@ -1,7 +1,7 @@
 using afIoc::ConcurrentState
 using afIoc::Inject
-using afIoc::SrcErrLocation
 using afBedSheet::Config
+using afPlastic::SrcCodeSnippet
 using mustache::Mustache
 using mustache::MustacheParser
 
@@ -21,7 +21,7 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 	@Inject @Config { id="afMoustache.templateTimeout" }
 	private const Duration templateTimeout
 	
-	@Inject	@Config { id="afMoustache.srcCodePadding" } 	
+	@Inject	@Config { id="afBedSheet.plastic.srcCodeErrPadding" }
 	private const Int srcCodePadding
 
 	private const FileCache 	cache	:= FileCache(templateTimeout)
@@ -54,10 +54,10 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 			if (!reg.find)
 				throw err
 			
-			line 		:= reg.group(1).toInt
-			msg 		:= reg.group(2).splitLines.join.replace("\t", " ")	// take out the new line chars
-			srcErrLoc	:= SrcErrLocation(loc, src, line, msg)
-			throw MoustacheErr(srcErrLoc, srcCodePadding)
+			line 	:= reg.group(1).toInt
+			msg 	:= reg.group(2).splitLines.join.replace("\t", " ")	// take out the new line chars
+			srcCode	:= SrcCodeSnippet(loc, src)
+			throw MoustacheErr(srcCode, line, msg, srcCodePadding)
 		}
 	}
 }

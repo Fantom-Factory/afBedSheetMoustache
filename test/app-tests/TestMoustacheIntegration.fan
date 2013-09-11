@@ -21,6 +21,6 @@ internal class TestMoustacheIntegration : Test {
 	Void testErrPageIntegration() {
 		res := client.get(`/musErr`)
 		verifyEq(res.statusCode, 500)
-		verify(res.asStr.contains("<h2>Moustache Compilation Err</h2>"))
+		verify(res.asStr.contains("<h2>Moustache Err</h2>"))
 	}
 }
