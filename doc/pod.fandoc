@@ -71,7 +71,9 @@ Release Notes [#releaseNotes]
 
 v1.0.2 [#v1.0.2]
 ----------------
- - Chg: Renamed 'MoustacheConfigIds.linesOfSrcCodePadding' to 'srcCodePadding' to mimic afBedSheetEfan.
+ - Chg: Updated to use [afPlastic]`http://repo.status302.com/doc/afPlastic/#overview`
+ - Chg: Updated Errs to extend 'afPlastic::SrcCodeErr'
+ - Chg: Removed Err Page printing as BedSheet now does generic 'SrcCodeErr'.
  - Chg: Corrected the 'vcs.uri' pod meta data - `https://bitbucket.org/AlienFactory/afbedsheetmoustache`
 
 v1.0.0 [#v1.0.0]

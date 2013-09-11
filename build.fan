@@ -21,7 +21,7 @@ class Build : BuildPod {
 		]
 
 		depends = ["sys 1.0", "web 1.0",
-					"afIoc 1.4.4+", "afBedSheet 1.0+", "mustache 1.0"]
+					"afIoc 1.4.4+", "afBedSheet 1.0+", "afPlastic 0+", "mustache 1.0"]
 		srcDirs = [`test/`, `test/unit-tests/`, `test/app-tests/`, `test/app/`, `fan/`, `fan/public/`, `fan/internal/`, `fan/internal/utils/`]
 		resDirs = [`doc/`, `res/`]
 

@@ -1,25 +1,21 @@
-using afIoc::SrcErrLocation
+using afPlastic::SrcCodeErr
+using afPlastic::SrcCodeSnippet
 
 ** Indicates a 'Mustache' parsing Err; the stack trace trace contains a code snippet of where the 
 ** Err occurred.
-const class MoustacheErr : Err {
+const class MoustacheErr : Err, SrcCodeErr {
+	const override SrcCodeSnippet 	srcCode
+	const override Int 				errLineNo
+	private const  Int 				linesOfPadding
 
-	internal const SrcErrLocation srcErrLoc
-	internal const Int srcCodePadding
-
-	internal new make(SrcErrLocation srcErrLoc, Int srcCodePadding := 5) : super(srcErrLoc.errMsg) {
-		this.srcErrLoc = srcErrLoc
-		this.srcCodePadding = srcCodePadding
+	internal new make(SrcCodeSnippet srcCode, Int errLineNo, Str errMsg, Int linesOfPadding) : super(errMsg) {
+		this.srcCode = srcCode
+		this.errLineNo = errLineNo
+		this.linesOfPadding = linesOfPadding
 	}
-
+	
 	override Str toStr() {
-		buf := StrBuf()
-		buf.add("${typeof.qname}: ${msg}")
-		buf.add("\nMoustache Compilation Err:\n")
-
-		buf.add(srcErrLoc.srcCodeSnippet(srcCodePadding))
-
-		buf.add("\nStack Trace:")
-		return buf.toStr
+		print(msg, linesOfPadding)
 	}
 }
+

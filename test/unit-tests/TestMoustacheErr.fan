@@ -45,7 +45,7 @@ internal class TestMoustacheErr : Test {
 			templates.renderFromStr(src)
 			fail
 		} catch (MoustacheErr err) {
-			verifyEq(err.srcErrLoc.errLineNo, 10)
+			verifyEq(err.errLineNo, 10)
 		}
 	}	
 }
