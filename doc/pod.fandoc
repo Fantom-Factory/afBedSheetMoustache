@@ -34,6 +34,7 @@ Quick Start [#quickStart]
 pre>
 using afIoc::Inject
 using afBedSheet::Text
+using afBedSheetMoustache::MoustacheTemplates
 
 const class RouteHandler {
 
