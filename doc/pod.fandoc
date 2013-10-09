@@ -4,7 +4,7 @@ Overview [#overview]
 [afBedSheet]`http://repo.status302.com/doc/afBedSheet/#overview` web framework.
 
 It provides a cache for your compiled [Mustache]`https://bitbucket.org/xored/mustache/` templates and throws `MoustacheErr`s to
-show details of any compilation failures.
+show details of compilation failures.
 
 Example:
 pre>
@@ -69,6 +69,10 @@ Because 'afBedSheetMoustache' defines [pod meta-data]`http://repo.status302.com/
 
 Release Notes [#releaseNotes]
 *****************************
+
+v1.0.4 [#v1.0.4]
+----------------
+ - Chg: Updated to use [afIocConfig]`http://repo.status302.com/doc/afIocConfig/#overview`.
 
 v1.0.2 [#v1.0.2]
 ----------------

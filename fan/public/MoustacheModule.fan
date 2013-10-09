@@ -2,9 +2,7 @@ using afIoc::Contribute
 using afIoc::OrderedConfig
 using afIoc::MappedConfig
 using afIoc::ServiceBinder
-using afBedSheet::ErrPrinterHtml
-using afBedSheet::ErrPrinterStr
-using afBedSheet::FactoryDefaults
+using afIocConfig::FactoryDefaults
 using web::WebOutStream
 
 ** The [afIoc]`http://repo.status302.com/doc/afIoc/#overview` module class.

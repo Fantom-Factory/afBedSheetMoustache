@@ -1,5 +1,6 @@
 using afIoc
-using afBedSheet
+using afBedSheet::Route
+using afBedSheet::Routes
 
 @SubModule { modules=[MoustacheModule#] }
 internal const class T_AppModule {

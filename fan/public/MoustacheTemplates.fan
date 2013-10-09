@@ -1,6 +1,6 @@
 using afIoc::ConcurrentState
 using afIoc::Inject
-using afBedSheet::Config
+using afIocConfig::Config
 using afPlastic::SrcCodeSnippet
 using mustache::Mustache
 using mustache::MustacheParser
