@@ -3,7 +3,7 @@
 `afBedSheetMoustache` is a [Fantom](http://fantom.org) library that integrates [Mustache](https://bitbucket.org/xored/mustache/) templates with the
 [afBedSheet](http://repo.status302.com/doc/afBedSheet/#overview) web framework.
 
-`afBedSheetMoustache` provides a cache for your compiled [Mustache](https://bitbucket.org/xored/mustache/) templates and throws `MoustacheErr`s to show details of any compilation failures.
+`afBedSheetMoustache` provides a cache for your compiled [Mustache](https://bitbucket.org/xored/mustache/) templates and throws `MoustacheErr`s to show details of compilation failures.
 
 Example:
 
@@ -59,3 +59,6 @@ Or install via fanr:
 
     $ fanr install -r http://repo.status302.com/fanr/ afBedSheetMoustache
 
+To use in a project, add a dependency in your `build.fan`:
+
+    depends = ["sys 1.0", ..., "afBedSheetMoustache 1.0+"]
