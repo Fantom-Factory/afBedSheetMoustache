@@ -5,7 +5,7 @@ class Build : BuildPod {
 	new make() {
 		podName = "afBedSheetMoustache"
 		summary = "A library for integrating Mustache templates with the afBedSheet web framework"
-		version = Version([1,0,3])
+		version = Version([1,0,5])
 
 		meta	= [	"org.name"		: "Alien-Factory",
 					"org.uri"		: "http://www.alienfactory.co.uk/",
@@ -30,6 +30,6 @@ class Build : BuildPod {
 
 		// exclude test code when building the pod
 		srcDirs = srcDirs.exclude { it.toStr.startsWith("test/") }				
-		resDirs = resDirs.exclude { it.toStr.startsWith("test/") }				
+//		resDirs = resDirs.exclude { it.toStr.startsWith("test/") }				
 	}
 }
