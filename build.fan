@@ -21,7 +21,7 @@ class Build : BuildPod {
 				]
 
 		depends = ["sys 1.0", "web 1.0",
-					"afIoc 1.4.4+", "afBedSheet 1.0+", "afIocConfig 0+", "afPlastic 1.0+", "mustache 1.0"]
+					"afIoc 1.4.4+", "afBedSheet 1.2+", "afIocConfig 0+", "afPlastic 1.0+", "mustache 1.0"]
 		srcDirs = [`test/`, `test/unit-tests/`, `test/app-tests/`, `test/app/`, `fan/`, `fan/public/`, `fan/internal/`, `fan/internal/utils/`]
 		resDirs = [`doc/`, `res/`]
 
@@ -30,6 +30,5 @@ class Build : BuildPod {
 
 		// exclude test code when building the pod
 		srcDirs = srcDirs.exclude { it.toStr.startsWith("test/") }				
-//		resDirs = resDirs.exclude { it.toStr.startsWith("test/") }				
 	}
 }

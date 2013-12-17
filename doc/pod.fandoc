@@ -1,7 +1,7 @@
 Overview [#overview]
 ********************
-'afBedSheetMoustache' is a Fantom library that integrates [Mustache]`https://bitbucket.org/xored/mustache/` templates with the
-[afBedSheet]`http://repo.status302.com/doc/afBedSheet/#overview` web framework.
+'BedSheetMoustache' is a Fantom library that integrates [Mustache]`https://bitbucket.org/xored/mustache/` templates with the
+[BedSheet]`http://repo.status302.com/doc/afBedSheet/#overview` web framework.
 
 It provides a cache for your compiled [Mustache]`https://bitbucket.org/xored/mustache/` templates and throws `MoustacheErr`s to
 show details of compilation failures.
@@ -27,6 +27,22 @@ Moustache Compilation Err:
 
 Sections are added to the standard [afBedSheet]`http://repo.status302.com/doc/afBedSheet/#overview` Err page to show the same.
 
+![Moustache Err in BedSheet]`http://static.alienfactory.co.uk/fantom-docs/moustacheErr.png`
+
+
+
+Install [#install]
+******************
+Install 'BedSheetMoustache' with the [Fantom Respository Manager]`http://fantom.org/doc/docFanr/Tool.html#install`:
+
+  C:\> fanr install -r http://repo.status302.com/fanr/ afBedSheetMoustache
+
+Or download the pod from [Status302]`http://repo.status302.com/browse/afBedSheetMoustache` and copy it to '%FAN_HOME%/lib/fan/'.
+
+To use in a Fantom project, add a dependency to its 'build.fan':
+
+  depends = ["sys 1.0", ..., "afBedSheetMoustache 1.0+"]
+
 
 
 Quick Start [#quickStart]
@@ -49,21 +65,6 @@ const class RouteHandler {
   }
 }
 <pre
-
-
-
-Usage [#usage]
-**************
-To use 'afBedSheetMoustache' just add it as dependency in your project's 'build.fan'. Example:
-
-pre>
-depends = ["sys 1.0", "afIoc 1.4+", "afBedSheet 1.0+", "afBedSheetMoustache 1.0+", ... ]
-<pre
-
-...and that's it!
-
-Because 'afBedSheetMoustache' defines [pod meta-data]`http://repo.status302.com/doc/afIoc/RegistryBuilder.html` for
-[afIoc]`http://repo.status302.com/doc/afIoc/#overview`, no more configuration or setup is required.
 
 
 
