@@ -5,7 +5,7 @@ class Build : BuildPod {
 	new make() {
 		podName = "afBedSheetMoustache"
 		summary = "A library for integrating Mustache templates with the afBedSheet web framework"
-		version = Version("1.0.6")
+		version = Version("1.0.7")
 
 		meta = [
 			"org.name"		: "Alien-Factory",
@@ -14,7 +14,7 @@ class Build : BuildPod {
 			"proj.uri"		: "http://repo.status302.com/doc/afBedSheetMoustache/#overview",
 			"vcs.uri"		: "https://bitbucket.org/AlienFactory/afbedsheetmoustache",
 			"license.name"	: "BSD 2-Clause License",
-			"repo.private"	: "false",
+			"repo.private"	: "true",
 
 			"afIoc.module"	: "afBedSheetMoustache::MoustacheModule"		
 		]
