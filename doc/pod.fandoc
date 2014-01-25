@@ -1,7 +1,7 @@
 Overview [#overview]
 ********************
 'BedSheetMoustache' is a Fantom library that integrates [Mustache]`https://bitbucket.org/xored/mustache/` templates with the
-[BedSheet]`http://repo.status302.com/doc/afBedSheet/#overview` web framework.
+[BedSheet]`http://www.fantomfactory.org/pods/afBedSheet` web framework.
 
 It provides a cache for your compiled [Mustache]`https://bitbucket.org/xored/mustache/` templates and throws `MoustacheErr`s to
 show details of compilation failures.
@@ -25,7 +25,7 @@ Moustache Compilation Err:
     16:         {{{ content }}}
 <pre
 
-Sections are added to the standard [afBedSheet]`http://repo.status302.com/doc/afBedSheet/#overview` Err page to show the same.
+Sections are added to the standard [BedSheet]`http://www.fantomfactory.org/pods/afBedSheet` Err page to show the same.
 
 ![Moustache Err in BedSheet]`http://static.alienfactory.co.uk/fantom-docs/moustacheErr.png`
 
@@ -36,8 +36,6 @@ Install [#install]
 Install 'BedSheetMoustache' with the [Fantom Respository Manager]`http://fantom.org/doc/docFanr/Tool.html#install`:
 
   C:\> fanr install -r http://repo.status302.com/fanr/ afBedSheetMoustache
-
-Or download the pod from [Status302]`http://repo.status302.com/browse/afBedSheetMoustache` and copy it to '%FAN_HOME%/lib/fan/'.
 
 To use in a Fantom project, add a dependency to its 'build.fan':
 
@@ -71,13 +69,17 @@ const class RouteHandler {
 Release Notes [#releaseNotes]
 *****************************
 
+v1.0.6 [#v1.0.6]
+----------------
+ - Chg: Updated to [Ioc 1.5.2]`http://www.fantomfactory.org/pods/afIoc`, [Ioc Config 1.0.2]`http://www.fantomfactory.org/pods/afIocConfig`, and [BedSheet 1.3.0]`http://www.fantomfactory.org/pods/afBedSheet`
+
 v1.0.4 [#v1.0.4]
 ----------------
- - Chg: Updated to use [afIocConfig]`http://repo.status302.com/doc/afIocConfig/#overview`.
+ - Chg: Updated to use [Ioc Config]`http://www.fantomfactory.org/pods/afIocConfig`.
 
 v1.0.2 [#v1.0.2]
 ----------------
- - Chg: Updated to use [afPlastic]`http://repo.status302.com/doc/afPlastic/#overview`
+ - Chg: Updated to use [Plastic]`http://repo.status302.com/doc/afPlastic/#overview`
  - Chg: Updated Errs to extend 'afPlastic::SrcCodeErr'
  - Chg: Removed Err Page printing as BedSheet now does generic 'SrcCodeErr'.
  - Chg: Corrected the 'vcs.uri' pod meta data - `https://bitbucket.org/AlienFactory/afbedsheetmoustache`

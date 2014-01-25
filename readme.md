@@ -1,7 +1,7 @@
 # afBedSheetMoustache
 
 `afBedSheetMoustache` is a [Fantom](http://fantom.org) library that integrates [Mustache](https://bitbucket.org/xored/mustache/) templates with the
-[afBedSheet](http://repo.status302.com/doc/afBedSheet/#overview) web framework.
+[afBedSheet](http://www.fantomfactory.org/pods/afBedSheet) web framework.
 
 `afBedSheetMoustache` provides a cache for your compiled [Mustache](https://bitbucket.org/xored/mustache/) templates and throws `MoustacheErr`s to show details of compilation failures.
 

@@ -1,6 +1,6 @@
 using afIoc
 using mustache
-using afBedSheet
+using afBounce
 
 internal class TestMoustacheErr : Test {
 	
