@@ -10,7 +10,7 @@ internal class MoustacheModule {
 	
 	@NoDoc
 	static Void bind(ServiceBinder binder) {
-		binder.bindImpl(MoustacheTemplates#).withoutProxy		// has default method args		
+		binder.bind(MoustacheTemplates#).withoutProxy		// has default method args		
 	}
 
 	@NoDoc

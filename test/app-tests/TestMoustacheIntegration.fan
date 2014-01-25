@@ -1,5 +1,5 @@
 using afIoc
-using afBedSheet
+using afBounce
 
 internal class TestMoustacheIntegration : Test {
 
