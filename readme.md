@@ -48,7 +48,7 @@ Example:
 
 ## Install
 
-Install `Cold Feet` with the Fantom Respository Manager ( [fanr](http://fantom.org/doc/docFanr/Tool.html#install) ):
+Install `BedSheet Moustache` with the Fantom Respository Manager ( [fanr](http://fantom.org/doc/docFanr/Tool.html#install) ):
 
     C:\> fanr install -r http://repo.status302.com/fanr/ afBedSheetMoustache
 
