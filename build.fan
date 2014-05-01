@@ -5,7 +5,7 @@ class Build : BuildPod {
 	new make() {
 		podName = "afBedSheetMoustache"
 		summary = "A library for integrating Mustache templates with the BedSheet web framework"
-		version = Version("1.0.8")
+		version = Version("1.0.9")
 
 		meta = [
 			"org.name"		: "Alien-Factory",
