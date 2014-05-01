@@ -1,6 +1,6 @@
 Overview [#overview]
 ********************
-'BedSheetMoustache' is a Fantom library that integrates [Mustache]`https://bitbucket.org/xored/mustache/` templates with the
+'BedSheet Moustache' is a Fantom library that integrates [Mustache]`https://bitbucket.org/xored/mustache/` templates with the
 [BedSheet]`http://www.fantomfactory.org/pods/afBedSheet` web framework.
 
 It provides a cache for your compiled [Mustache]`https://bitbucket.org/xored/mustache/` templates and throws `MoustacheErr`s to
@@ -68,6 +68,9 @@ const class RouteHandler {
 
 Release Notes [#releaseNotes]
 *****************************
+v1.0.8 [#v1.0.8]
+----------------
+ - Chg: Updated to [Ioc 1.6.0]`http://www.fantomfactory.org/pods/afIoc` and [BedSheet 1.3.6]`http://www.fantomfactory.org/pods/afBedSheet`
 
 v1.0.6 [#v1.0.6]
 ----------------

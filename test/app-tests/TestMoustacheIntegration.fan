@@ -1,5 +1,7 @@
 using afIoc
 using afBounce
+using afButter
+using afSizzle
 
 internal class TestMoustacheIntegration : Test {
 
@@ -19,8 +21,12 @@ internal class TestMoustacheIntegration : Test {
 	}
 
 	Void testErrPageIntegration() {
+		client.errOn5xx.enabled = false
+
 		res := client.get(`/musErr`)
 		verifyEq(res.statusCode, 500)
-		verify(res.asStr.contains("<h2>Moustache Err</h2>"))
+		
+		title := Element("h2#moustacheErr")
+        title.verifyTextEq("Moustache Err")
 	}
 }

@@ -1,19 +1,22 @@
-using afIoc::Contribute
-using afIoc::OrderedConfig
-using afIoc::MappedConfig
-using afIoc::ServiceBinder
+using concurrent
+using afIoc
 using afIocConfig::FactoryDefaults
-using web::WebOutStream
 
-** The [afIoc]`http://repo.status302.com/doc/afIoc/#overview` module class.
-internal class MoustacheModule {
+** The [Ioc]`http://www.fantomfactory.org/pods/afIoc` module class.
+** 
+** This class is public so it may be referenced explicitly in test code.
+@NoDoc
+const class MoustacheModule {
 	
-	@NoDoc
 	static Void bind(ServiceBinder binder) {
 		binder.bind(MoustacheTemplates#).withoutProxy		// has default method args		
 	}
 
-	@NoDoc
+	@Contribute { serviceType=ActorPools# }
+	static Void contributeActorPools(MappedConfig config) {
+		config["afMoustache.fileCache"] = ActorPool()
+	}
+
 	@Contribute { serviceType=FactoryDefaults# }
 	static Void contributeFactoryDefaults(MappedConfig config) {
 		config[MoustacheConfigIds.templateTimeout]	= 10sec
