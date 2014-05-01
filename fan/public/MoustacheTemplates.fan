@@ -29,7 +29,7 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 	
 	new make(ActorPools actorPools, |This|in) { 
 		in(this)
-		cache = SynchronizedFileMap(actorPools["afMoustache.fileCache"], templateTimeout)
+		cache = SynchronizedFileMap(actorPools["afBedSheetMoustache.fileCache"], templateTimeout)
 	}
 	
 	override Str renderFromStr(Str template, Obj? context := null, [Str:Mustache] partials := [:], Obj?[] callStack := [,], Str indentStr := "") {

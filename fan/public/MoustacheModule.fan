@@ -14,7 +14,7 @@ const class MoustacheModule {
 
 	@Contribute { serviceType=ActorPools# }
 	static Void contributeActorPools(MappedConfig config) {
-		config["afMoustache.fileCache"] = ActorPool()
+		config["afBedSheetMoustache.fileCache"] = ActorPool()
 	}
 
 	@Contribute { serviceType=FactoryDefaults# }
