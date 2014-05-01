@@ -1,5 +1,6 @@
-using afIoc::ConcurrentState
+using afConcurrent::SynchronizedFileMap
 using afIoc::Inject
+using afIoc::ActorPools
 using afIocConfig::Config
 using afPlastic::SrcCodeSnippet
 using mustache::Mustache
@@ -24,9 +25,12 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 	@Inject	@Config { id="afBedSheet.plastic.srcCodeErrPadding" }
 	private const Int srcCodePadding
 
-	private const FileCache 	cache	:= FileCache(templateTimeout)
+	private const SynchronizedFileMap cache
 	
-	new make(|This|in) { in(this) }
+	new make(ActorPools actorPools, |This|in) { 
+		in(this)
+		cache = SynchronizedFileMap(actorPools["afMoustache.fileCache"], templateTimeout)
+	}
 	
 	override Str renderFromStr(Str template, Obj? context := null, [Str:Mustache] partials := [:], Obj?[] callStack := [,], Str indentStr := "") {
 		moustache := compile(`/rendered/from/str`, template)

@@ -1,9 +1,9 @@
-# afBedSheetMoustache
+# BedSheet Moustache
 
-`afBedSheetMoustache` is a [Fantom](http://fantom.org) library that integrates [Mustache](https://bitbucket.org/xored/mustache/) templates with the
-[afBedSheet](http://www.fantomfactory.org/pods/afBedSheet) web framework.
+`BedSheet Moustache` is a [Fantom](http://fantom.org) library that integrates [Mustache](https://bitbucket.org/xored/mustache/) templates with the
+[BedSheet](http://www.fantomfactory.org/pods/afBedSheet) web framework.
 
-`afBedSheetMoustache` provides a cache for your compiled [Mustache](https://bitbucket.org/xored/mustache/) templates and throws `MoustacheErr`s to show details of compilation failures.
+`BedSheet Moustache` provides a cache for your compiled [Mustache](https://bitbucket.org/xored/mustache/) templates and throws `MoustacheErr`s to show details of compilation failures.
 
 Example:
 
@@ -29,6 +29,7 @@ Example:
 
     using afIoc::Inject
     using afBedSheet::Text
+    using afBedSheetMoustache::MoustacheTemplates
 
     const class RouteHandler {
 
@@ -45,20 +46,18 @@ Example:
 
 
 
+## Install
+
+Install `Cold Feet` with the Fantom Respository Manager ( [fanr](http://fantom.org/doc/docFanr/Tool.html#install) ):
+
+    C:\> fanr install -r http://repo.status302.com/fanr/ afBedSheetMoustache
+
+To use in a [Fantom](http://fantom.org/) project, add a dependency to `build.fan`:
+
+    depends = ["sys 1.0", ..., "afBedSheetMoustache 1.0+"]
+
+
+
 ## Documentation
 
 Full API & fandocs are available on the [status302 repository](http://repo.status302.com/doc/afBedSheetMoustache/#overview).
-
-
-
-## Install
-
-Download from [status302](http://repo.status302.com/browse/afBedSheetMoustache).
-
-Or install via fanr:
-
-    $ fanr install -r http://repo.status302.com/fanr/ afBedSheetMoustache
-
-To use in a project, add a dependency in your `build.fan`:
-
-    depends = ["sys 1.0", ..., "afBedSheetMoustache 1.0+"]
