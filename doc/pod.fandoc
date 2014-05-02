@@ -70,15 +70,15 @@ Release Notes [#releaseNotes]
 *****************************
 v1.0.8 [#v1.0.8]
 ----------------
- - Chg: Updated to use [Ioc 1.6.0]`http://www.fantomfactory.org/pods/afIoc` and [BedSheet 1.3.6]`http://www.fantomfactory.org/pods/afBedSheet`.
+ - Chg: Updated to use [IoC 1.6.0]`http://www.fantomfactory.org/pods/afIoc` and [BedSheet 1.3.6]`http://www.fantomfactory.org/pods/afBedSheet`.
 
 v1.0.6 [#v1.0.6]
 ----------------
- - Chg: Updated to use [Ioc 1.5.2]`http://www.fantomfactory.org/pods/afIoc`, [Ioc Config 1.0.2]`http://www.fantomfactory.org/pods/afIocConfig`, and [BedSheet 1.3.0]`http://www.fantomfactory.org/pods/afBedSheet`.
+ - Chg: Updated to use [IoC 1.5.2]`http://www.fantomfactory.org/pods/afIoc`, [Ioc Config 1.0.2]`http://www.fantomfactory.org/pods/afIocConfig`, and [BedSheet 1.3.0]`http://www.fantomfactory.org/pods/afBedSheet`.
 
 v1.0.4 [#v1.0.4]
 ----------------
- - Chg: Updated to use [Ioc Config]`http://www.fantomfactory.org/pods/afIocConfig`.
+ - Chg: Updated to use [IoC Config]`http://www.fantomfactory.org/pods/afIocConfig`.
 
 v1.0.2 [#v1.0.2]
 ----------------
