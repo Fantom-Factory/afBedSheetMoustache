@@ -33,7 +33,7 @@ Sections are added to the standard [BedSheet]`http://www.fantomfactory.org/pods/
 
 Install [#install]
 ******************
-Install 'BedSheetMoustache' with the [Fantom Respository Manager]`http://fantom.org/doc/docFanr/Tool.html#install`:
+Install 'BedSheetMoustache' with the Fantom Repository Manager ( [fanr]`http://fantom.org/doc/docFanr/Tool.html#install` ):
 
   C:\> fanr install -r http://repo.status302.com/fanr/ afBedSheetMoustache
 
