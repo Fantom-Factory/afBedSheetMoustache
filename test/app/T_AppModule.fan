@@ -10,7 +10,7 @@ internal const class T_AppModule {
 	}
 
 	@Contribute { serviceType=Routes# }
-	static Void contributeRoutes(OrderedConfig conf) {
+	static Void contributeRoutes(Configuration conf) {
 		conf.add(Route(`/musOkay/*`, 	T_PageHandler#moustacheOkay))
 		conf.add(Route(`/musErr`, 		T_PageHandler#moustacheErr))
 	}
