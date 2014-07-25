@@ -13,12 +13,12 @@ const class MoustacheModule {
 	}
 
 	@Contribute { serviceType=ActorPools# }
-	static Void contributeActorPools(MappedConfig config) {
-		config["afBedSheetMoustache.fileCache"] = ActorPool()
+	static Void contributeActorPools(Configuration config) {
+		config["afBedSheetMoustache.fileCache"] = ActorPool() { it.name = "afBedSheetMoustache.fileCache" }
 	}
 
 	@Contribute { serviceType=FactoryDefaults# }
-	static Void contributeFactoryDefaults(MappedConfig config) {
+	static Void contributeFactoryDefaults(Configuration config) {
 		config[MoustacheConfigIds.templateTimeout]	= 10sec
 	}
 }
