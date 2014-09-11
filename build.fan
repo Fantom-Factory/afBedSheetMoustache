@@ -5,7 +5,7 @@ class Build : BuildPod {
 	new make() {
 		podName = "afBedSheetMoustache"
 		summary = "A library for integrating Mustache templates with the BedSheet web framework"
-		version = Version("1.0.11")
+		version = Version("1.0.12")
 
 		meta = [
 			"proj.name"		: "BedSheet Moustache",
@@ -23,15 +23,15 @@ class Build : BuildPod {
 			
 			// ---- Core ------------------------
 			"afConcurrent 1.0.6+",
-			"afIoc 1.7.2+",
-			"afIocConfig 1.0.10+", 
+			"afIoc 2.0.0+",
+			"afIocConfig 1.0.14+", 
 			"afPlastic 1.0.16+",			
-			"afBedSheet 1.3.12+", 
+			"afBedSheet 1.3.16+", 
 			"mustache 1.0",
 			
 			// ---- Test ------------------------
-			"afBounce 0.0.6+",
-			"afButter 0.0.4+",
+			"afBounce 1.0.14+",
+			"afButter 1.0.2+",
 			"afSizzle 1.0.0+"
 		]
 

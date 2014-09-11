@@ -10,10 +10,10 @@ using mustache::MustacheParser
 const mixin MoustacheTemplates {
 	
 	** Renders a Moustache template.
-	abstract Str renderFromStr(Str template, Obj? context := null, [Str:Mustache] partials := [:], Obj?[] callStack := [,], Str indentStr := "")
+	abstract Str renderFromStr(Str template, Obj? context := null, [Str:Mustache]? partials := null, Obj?[]? callStack := null, Str? indentStr := null)
 
 	** Renders a Moustache template. The template is cached for future use.
-	abstract Str renderFromFile(File templateFile, Obj? context := null, [Str:Mustache] partials := [:], Obj?[] callStack := [,], Str indentStr := "")
+	abstract Str renderFromFile(File templateFile, Obj? context := null, [Str:Mustache]? partials := null, Obj?[]? callStack := null, Str? indentStr := null)
 
 }
 
@@ -32,14 +32,14 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 		cache = SynchronizedFileMap(actorPools["afBedSheetMoustache.fileCache"], templateTimeout)
 	}
 	
-	override Str renderFromStr(Str template, Obj? context := null, [Str:Mustache] partials := [:], Obj?[] callStack := [,], Str indentStr := "") {
+	override Str renderFromStr(Str template, Obj? context := null, [Str:Mustache]? partials := null, Obj?[]? callStack := null, Str? indentStr := null) {
 		moustache := compile(`/rendered/from/str`, template)
-		return moustache.render(context, partials, callStack, indentStr)
+		return moustache.render(context, partials ?: [:], callStack ?: [,], indentStr ?: Str.defVal)
 	}
 
-	override Str renderFromFile(File templateFile, Obj? context := null, [Str:Mustache] partials := [:], Obj?[] callStack := [,], Str indentStr := "") {
+	override Str renderFromFile(File templateFile, Obj? context := null, [Str:Mustache]? partials := null, Obj?[]? callStack := null, Str? indentStr := null) {
 		moustache := getTemplateFromFile(templateFile)
-		return moustache.render(context, partials, callStack, indentStr)
+		return moustache.render(context, partials ?: [:], callStack ?: [,], indentStr ?: Str.defVal)
 	}
 	
 	private Mustache getTemplateFromFile(File file) {

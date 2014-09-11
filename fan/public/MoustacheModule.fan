@@ -8,8 +8,8 @@ using afIocConfig::FactoryDefaults
 @NoDoc
 const class MoustacheModule {
 	
-	static Void bind(ServiceBinder binder) {
-		binder.bind(MoustacheTemplates#).withoutProxy		// has default method args		
+	static Void defineServices(ServiceDefinitions defs) {
+		defs.add(MoustacheTemplates#)		
 	}
 
 	@Contribute { serviceType=ActorPools# }

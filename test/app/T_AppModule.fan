@@ -5,7 +5,7 @@ using afBedSheet::Routes
 @SubModule { modules=[MoustacheModule#] }
 internal const class T_AppModule {
 	
-	static Void bind(ServiceBinder binder) {
+	static Void defineServices(ServiceDefinitions defs) {
 //		binder.bindImpl(Router#)
 	}
 
