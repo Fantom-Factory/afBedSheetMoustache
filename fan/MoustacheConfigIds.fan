@@ -4,9 +4,9 @@
 ** 
 ** pre>
 ** @Contribute { serviceType=ApplicationDefaults# } 
-** static Void configureAppDefaults(MappedConfig conf) {
+** static Void configureAppDefaults(Configuration config) {
 ** 
-**   conf[MoustacheConfigIds.templateTimeout] = 1min
+**   config[MoustacheConfigIds.templateTimeout] = 1min
 ** 
 ** }
 ** <pre
