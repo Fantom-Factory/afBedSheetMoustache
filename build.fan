@@ -10,7 +10,7 @@ class Build : BuildPod {
 		meta = [
 			"proj.name"		: "BedSheet Moustache",
 			"afIoc.module"	: "afBedSheetMoustache::MoustacheModule",		
-			"repo.private"	: "true"
+			"repo.private"	: "false"
 		]
 
 		index = [
@@ -35,7 +35,7 @@ class Build : BuildPod {
 			"afSizzle 1.0.0+"
 		]
 
-		srcDirs = [`test/`, `test/unit-tests/`, `test/app-tests/`, `test/app/`, `fan/`, `fan/public/`, `fan/internal/`, `fan/internal/utils/`]
+		srcDirs = [`test/`, `test/unit-tests/`, `test/app-tests/`, `test/app/`, `fan/`]
 		resDirs = [`res/`]
 	}
 	
