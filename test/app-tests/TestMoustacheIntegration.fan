@@ -17,7 +17,7 @@ internal class TestMoustacheIntegration : Test {
 
 	Void testWebOkay() {
 		res := client.get(`/musOkay/Beards!`)
-		verify(res.asStr.contains("<title>Beards!</title>"))
+		verify(res.body.str.contains("<title>Beards!</title>"))
 	}
 
 	Void testErrPageIntegration() {

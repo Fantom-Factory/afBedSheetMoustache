@@ -1,0 +1,59 @@
+Overview
+********
+BedSheet Moustache is a simple Fantom library that integrates [Mustache]`https://bitbucket.org/xored/mustache/` templates with the [BedSheet]`pod:afBedSheet` web framework.
+
+It provides a cache for your compiled [Mustache]`https://bitbucket.org/xored/mustache/` templates and throws `MoustacheErr`s to show details of compilation failures.
+
+
+
+Quick Start
+***********
+pre>
+syntax: fantom
+
+using afIoc::Inject
+using afBedSheet::Text
+using afBedSheetMoustache::MoustacheTemplates
+
+const class RouteHandler {
+
+    @Inject
+    private const MoustacheTemplates templates
+
+    new make(|This|in) { in(this) }
+
+    Text renderPage() {
+        html := templates.renderFromFile(`res/index.moustache`.toFile)
+        return Text.fromHtml(html)
+    }
+}
+<pre
+
+
+
+Template Errors
+***************
+Mustache template errors are pretty printed with a snippet of the source code in error:
+
+pre>
+Moustache Compilation Err:
+  file:/C:/Projects/Fantom/BedSheetMoustache/test/app/compilationErr.moustache : Line 11
+    - Unbalanced "{" in tag "{ alienHeadSvg }  <span class="brand">{{ title"
+
+     6:         {{{ bedSheetCss }}}
+     7:     </style>
+     8: </head>
+     9: <body>
+    10:     <header>
+==> 11:         {{{ alienHeadSvg }
+    12:         <span class="brand">{{ title }}</span>
+    13:     </header>
+    14:
+    15:     <main>
+    16:         {{{ content }}}
+<pre
+
+Sections are also added to the standard [BedSheet]`pod:afBedSheet` Err page to show the same.
+
+![Moustache Err in BedSheet]`moustacheErr.png`
+
