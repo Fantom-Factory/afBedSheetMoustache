@@ -1,0 +1,38 @@
+Versions
+********
+
+v1.0.12
+-------
+ - Chg: Updated to use [IoC 2.0.0]`pod:afIoc`.
+
+v1.0.10
+-------
+ - Chg: Updated to use [IoC 1.7.2]`pod:afIoc` and [BedSheet 1.3.12]`pod:afBedSheet`.
+
+v1.0.8
+------
+ - Chg: Updated to use [IoC 1.6.0]`pod:afIoc` and [BedSheet 1.3.6]`pod:afBedSheet`.
+
+v1.0.6
+------
+ - Chg: Updated to use [IoC 1.5.2]`pod:afIoc`, [Ioc Config 1.0.2]`pod:afIocConfig`, and [BedSheet 1.3.0]`pod:afBedSheet`.
+
+v1.0.4
+------
+ - Chg: Updated to use [IoC Config]`pod:afIocConfig`.
+
+v1.0.2
+------
+ - Chg: Updated to use [Plastic]`pod:afPlastic`
+ - Chg: Updated Errs to extend 'afPlastic::SrcCodeErr'
+ - Chg: Removed Err Page printing as BedSheet now does generic 'SrcCodeErr'.
+ - Chg: Corrected the 'vcs.uri' pod meta data - `https://bitbucket.org/AlienFactory/afbedsheetmoustache`
+
+v1.0.0
+------
+ - Chg: Renamed the `MoustacheConfigIds` values.
+
+v0.0.2
+------
+ - New: Preview release.
+

@@ -3,6 +3,8 @@
 ** To change their value, override them in your 'AppModule'. Example:
 ** 
 ** pre>
+** syntax: fantom
+** 
 ** @Contribute { serviceType=ApplicationDefaults# } 
 ** static Void configureAppDefaults(Configuration config) {
 ** 

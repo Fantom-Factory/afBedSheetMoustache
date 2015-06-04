@@ -5,12 +5,12 @@ class Build : BuildPod {
 	new make() {
 		podName = "afBedSheetMoustache"
 		summary = "A library for integrating Mustache templates with the BedSheet web framework"
-		version = Version("1.0.13")
+		version = Version("1.0.12")
 
 		meta = [
 			"proj.name"		: "BedSheet Moustache",
 			"afIoc.module"	: "afBedSheetMoustache::MoustacheModule",		
-			"repo.private"	: "true"
+			"repo.public"	: "true"
 		]
 
 		index = [
@@ -22,12 +22,12 @@ class Build : BuildPod {
 			"concurrent 1.0",
 			
 			// ---- Core ------------------------
-			"afConcurrent 1.0.6+",
-			"afIoc 2.0.0+",
-			"afIocConfig 1.0.14+", 
-			"afPlastic 1.0.16+",			
-			"afBedSheet 1.3.16+", 
-			"mustache 1.0",
+			"afConcurrent 1.0.6  - 1.0",
+			"afIoc        2.0.0  - 2.0",
+			"afIocConfig  1.0.14 - 1.0", 
+			"afPlastic    1.0.16 - 1.0",			
+			"afBedSheet   1.3.16 - 1.4", 
+			"mustache     1.0",
 			
 			// ---- Test ------------------------
 			"afBounce 1.0.14+",
@@ -36,7 +36,7 @@ class Build : BuildPod {
 		]
 
 		srcDirs = [`test/`, `test/unit-tests/`, `test/app-tests/`, `test/app/`, `fan/`]
-		resDirs = [`res/`]
+		resDirs = [`doc/`]
 	}
 	
 	override Void compile() {

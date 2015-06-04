@@ -2,7 +2,7 @@ using concurrent
 using afIoc
 using afIocConfig::FactoryDefaults
 
-** The [Ioc]`http://www.fantomfactory.org/pods/afIoc` module class.
+** The [Ioc]`pod:afIoc` module class.
 ** 
 ** This class is public so it may be referenced explicitly in test code.
 @NoDoc

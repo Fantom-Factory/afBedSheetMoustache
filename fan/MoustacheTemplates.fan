@@ -6,6 +6,7 @@ using afPlastic::SrcCodeSnippet
 using mustache::Mustache
 using mustache::MustacheParser
 
+** (Service) -
 ** A cache of 'Mustache' templates.
 const mixin MoustacheTemplates {
 	
