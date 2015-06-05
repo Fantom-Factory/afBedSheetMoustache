@@ -69,5 +69,5 @@ Moustache Compilation Err:
 
 Sections are also added to the standard [BedSheet](http://pods.fantomfactory.org/pods/afBedSheet) Err page to show the same.
 
-![Moustache Err in BedSheet](moustacheErr.png)
+![Moustache Err in BedSheet](http://pods.fantomfactory.org/pods/afBedSheetMoustache/doc/moustacheErr.png)
 
