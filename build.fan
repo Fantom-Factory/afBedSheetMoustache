@@ -9,7 +9,8 @@ class Build : BuildPod {
 
 		meta = [
 			"proj.name"		: "BedSheet Moustache",
-			"afIoc.module"	: "afBedSheetMoustache::MoustacheModule",		
+			"afIoc.module"	: "afBedSheetMoustache::MoustacheModule",
+			"repo.tags"		: "web",
 			"repo.public"	: "false"
 		]
 
