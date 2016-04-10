@@ -8,8 +8,8 @@ internal class TestMoustacheErr : Test {
 	private BedServer? bedServer
 	
 	override Void setup() {
-		bedServer = BedServer(T_AppModule#).addModule(MoustacheModule#).startup
-		bedServer.injectIntoFields(this)
+		bedServer = BedServer(T_AppModule#).addModulesFromPod("afBedSheetMoustache").startup
+		bedServer.inject(this)
 	}
 	
 	override Void teardown() {

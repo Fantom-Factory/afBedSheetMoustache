@@ -8,7 +8,7 @@ internal class TestMoustacheIntegration : Test {
 	BedClient? client
 	
 	override Void setup() {
-		client = BedServer(T_AppModule#).addModule(MoustacheModule#).startup.makeClient
+		client = BedServer(T_AppModule#).addModulesFromPod("afBedSheetMoustache").startup.makeClient
 	}
 	
 	override Void teardown() {

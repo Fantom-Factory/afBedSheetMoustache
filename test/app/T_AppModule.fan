@@ -5,12 +5,12 @@ using afBedSheet::Routes
 @SubModule { modules=[MoustacheModule#] }
 internal const class T_AppModule {
 	
-	static Void defineServices(ServiceDefinitions defs) {
+	Void defineServices(RegistryBuilder defs) {
 //		binder.bindImpl(Router#)
 	}
 
 	@Contribute { serviceType=Routes# }
-	static Void contributeRoutes(Configuration conf) {
+	Void contributeRoutes(Configuration conf) {
 		conf.add(Route(`/musOkay/*`, 	T_PageHandler#moustacheOkay))
 		conf.add(Route(`/musErr`, 		T_PageHandler#moustacheErr))
 	}
