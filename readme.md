@@ -1,7 +1,7 @@
-#BedSheet Moustache v1.0.12
+#BedSheet Moustache v1.0.14
 ---
 [![Written in: Fantom](http://img.shields.io/badge/written%20in-Fantom-lightgray.svg)](http://fantom.org/)
-[![pod: v1.0.12](http://img.shields.io/badge/pod-v1.0.12-yellow.svg)](http://www.fantomfactory.org/pods/afBedSheetMoustache)
+[![pod: v1.0.14](http://img.shields.io/badge/pod-v1.0.14-yellow.svg)](http://www.fantomfactory.org/pods/afBedSheetMoustache)
 ![Licence: MIT](http://img.shields.io/badge/licence-MIT-blue.svg)
 
 ## Overview
@@ -14,7 +14,7 @@ It provides a cache for your compiled [Mustache](https://bitbucket.org/xored/mus
 
 Install `BedSheet Moustache` with the Fantom Repository Manager ( [fanr](http://fantom.org/doc/docFanr/Tool.html#install) ):
 
-    C:\> fanr install -r http://repo.status302.com/fanr/ afBedSheetMoustache
+    C:\> fanr install -r http://pods.fantomfactory.org/fanr/ afBedSheetMoustache
 
 To use in a [Fantom](http://fantom.org/) project, add a dependency to `build.fan`:
 
