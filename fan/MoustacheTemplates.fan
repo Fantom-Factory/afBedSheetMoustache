@@ -1,6 +1,6 @@
 using afConcurrent::SynchronizedFileMap
 using afIoc::Inject
-using afIoc::ActorPools
+using afConcurrent::ActorPools
 using afIocConfig::Config
 using afPlastic::SrcCodeSnippet
 using mustache::Mustache
@@ -23,9 +23,6 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 	@Inject @Config { id="afMoustache.templateTimeout" }
 	private const Duration templateTimeout
 	
-	@Inject	@Config { id="afBedSheet.plastic.srcCodeErrPadding" }
-	private const Int srcCodePadding
-
 	private const SynchronizedFileMap cache
 	
 	new make(ActorPools actorPools, |This|in) { 
@@ -62,7 +59,7 @@ internal const class MoustacheTemplatesImpl : MoustacheTemplates {
 			line 	:= reg.group(1).toInt
 			msg 	:= reg.group(2).splitLines.join.replace("\t", " ")	// take out the new line chars
 			srcCode	:= SrcCodeSnippet(loc, src)
-			throw MoustacheErr(srcCode, line, msg, srcCodePadding)
+			throw MoustacheErr(srcCode, line, msg, 5)
 		}
 	}
 }
