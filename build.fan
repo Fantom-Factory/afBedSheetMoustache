@@ -5,13 +5,13 @@ class Build : BuildPod {
 	new make() {
 		podName = "afBedSheetMoustache"
 		summary = "Integrates Mustache templates with the BedSheet web framework"
-		version = Version("1.0.14")
+		version = Version("1.0.15")
 
 		meta = [
 			"proj.name"		: "BedSheet Moustache",
 			"afIoc.module"	: "afBedSheetMoustache::MoustacheModule",
 			"repo.tags"		: "web",
-			"repo.public"	: "true"
+			"repo.public"	: "false"
 		]
 
 		index = [
